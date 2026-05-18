@@ -45,8 +45,7 @@ TOPIC_LABELS = [
 # Este umbral fue escogido tras revisar ejemplos en la literatura y a base de prueba y error
 CONFIDENCE_THRESHOLD = 0.20
 
-# Modelo que usamos: XLM-RoBERTa entrenado en XNLI (31 idiomas, incluido español)
-# Es grande (~1.1GB) pero muy preciso. Solo se descarga una vez y queda en caché.
+# Modelo que usamos: XLM-RoBERTa 
 MODEL_NAME = "joeddav/xlm-roberta-large-xnli"
 
 
