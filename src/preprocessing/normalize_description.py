@@ -39,7 +39,7 @@ def _remove_emojis(text: str) -> str:
 
 
 def _remove_hashtags(text: str) -> str:
-    return re.sub(r"#\w+", "", text)
+    return re.sub(r"#(\w+)", r"\1", text)
 
 
 def _remove_phone_numbers(text: str) -> str:

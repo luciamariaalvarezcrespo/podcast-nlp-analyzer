@@ -39,7 +39,7 @@ def test_remove_emojis():
 
 def test_remove_hashtags():
     text = "Este es un #ejemplo de texto con #hashtag"
-    assert _remove_hashtags(text) == "Este es un  de texto con "
+    assert _remove_hashtags(text) == "Este es un ejemplo de texto con hashtag"
 
 
 def test_remove_phone_numbers_from_description():
