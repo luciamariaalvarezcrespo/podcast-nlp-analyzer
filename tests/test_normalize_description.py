@@ -47,4 +47,7 @@ def test_remove_phone_numbers_from_description():
     cleaned = _remove_phone_numbers(text)
     assert "+34" not in cleaned
     assert "636" not in cleaned
-    assert "whatsapp" in cleaned
+    assert "14" not in cleaned
+    assert "75" not in cleaned
+    assert "20" not in cleaned
+    assert cleaned.strip() == "Mándanos un audio por whatsapp"

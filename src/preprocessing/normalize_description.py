@@ -15,7 +15,7 @@ def clean_description(text: str) -> str:
     - lowercases the input
     - removes emoji glyphs
     - removes hashtag tokens
-    - removes telephone numbers
+    - removes telephone numbers and any preceding "al"
     - strips leading/trailing whitespace
 
     Args:
@@ -44,6 +44,7 @@ def _remove_hashtags(text: str) -> str:
 
 def _remove_phone_numbers(text: str) -> str:
     phone_pattern = re.compile(
-        r"(?:\+?\d{1,3}[\s\-.])?(?:\(?\d{2,4}\)?[\s\-.]?){1,4}\d{2,4}"
+        r"\bal\s*[+0-9().\s-]{7,}",
+        flags=re.IGNORECASE,
     )
     return phone_pattern.sub("", text)
