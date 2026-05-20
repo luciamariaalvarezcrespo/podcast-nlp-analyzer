@@ -58,3 +58,4 @@ typer==0.25.1
 typing_extensions==4.15.0
 umap-learn==0.5.12
 urllib3==2.7.0
+emoji==2.7.0
